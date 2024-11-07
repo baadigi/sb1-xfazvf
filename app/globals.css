@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 217 24% 17%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 217 24% 17%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 24% 17%;
+    
+    --primary: 206 93% 37%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 217 24% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 201 71% 75%;
+    --accent-foreground: 217 24% 17%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 206 93% 37%;
+    
+    --radius: 0.5rem;
+
+    /* Custom brand colors */
+    --brand-blue: 206 93% 37%;      /* #076AB4 */
+    --brand-navy: 207 42% 44%;      /* #41729F */
+    --brand-dark: 217 24% 17%;      /* #1E293B */
+    --brand-light: 201 71% 75%;     /* #99CAE7 */
+  }
+
+  .dark {
+    --background: 217 24% 17%;
+    --foreground: 210 40% 98%;
+    
+    --card: 217 24% 17%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 217 24% 17%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 206 93% 37%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 201 71% 75%;
+    --secondary-foreground: 217 24% 17%;
+    
+    --muted: 217 24% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 207 42% 44%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 217 24% 27%;
+    --input: 217 24% 27%;
+    --ring: 206 93% 37%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradients */
+.gradient-brand {
+  @apply bg-gradient-to-r from-[#076AB4] via-[#41729F] to-[#1E293B];
+}
+
+.gradient-light {
+  @apply bg-gradient-to-r from-[#99CAE7]/20 via-[#076AB4]/10 to-background;
+}
